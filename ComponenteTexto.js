@@ -1,49 +1,27 @@
-import React, { Component } from 'react'
+import React from 'react'
 import {
-  Platform,
   StyleSheet,
-  Text,
   View,
-  Button,
-  Alert
+  Button
 } from 'react-native';
 
-
-
-class ComponenteTexto extends Component{
-
-    _onPressButton() {
-      Alert.alert('You tapped the button!')
-    }
-  
-    render(){
+function ComponenteTexto (props){
       return(
         <View>
-          <View style={styles.alternativeLayoutButtonContainer}>
+          <View >
             <Button
-              onPress={this._onPressButton}
-              title="Hola"
-            />
-            <Button
-              onPress={this._onPressButton}
-              title="This looks great!"
-            />
-          </View>
-          <View style={styles.alternativeLayoutButtonContainer}>
-            <Button
-              onPress={this._onPressButton}
-              title="Kevin"
+              onPress={props.click}
+              title="Click"
             />
           </View>
         </View>
       );
-    }
-  }
+}
 
-  
 const styles = StyleSheet.create({
   alternativeLayoutButtonContainer: {
     flexDirection: 'row-reverse',
   },
 });
-  export default ComponenteTexto
+
+export default ComponenteTexto
