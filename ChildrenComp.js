@@ -13,7 +13,8 @@ class ChildrenComp extends Component {
       if(this.props.result){
           var res = this.props.result.map((item,i)=>{
               return(
-                 <Text key={i}>{item.title}</Text>
+                <Text key={i}>{item.title}, {item.releaseYear}</Text>
+                // <Text>{item.releaseYear}</Text>
               )
           })
       }else{
